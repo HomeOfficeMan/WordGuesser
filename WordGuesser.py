@@ -69,13 +69,12 @@ def end_game():
         global game_Over 
         game_Over = True
 
-###Main game loop
+## Main game loop
 begin_game()
 while not game_Over:
     guess = input("Please enter a letter or the whole word: ").strip().lower()
     process_guess(guess)    
     if(len(letters_Wrong) >= 6 or word_Found):
-        print("DEBUG DEBUG DEBUG")
         end_game()
     
     
