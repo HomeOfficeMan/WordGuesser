@@ -1,4 +1,4 @@
-import random
+import numpy.random as np
 
 GAME_TITLE = "Cooles Spiel"
 word_Bank = []
@@ -20,7 +20,7 @@ def begin_game():
 
     letters_Guessed.clear()
     letters_Wrong.clear()
-    word_To_Guess = random.choice(word_Bank)
+    word_To_Guess = np.choice(word_Bank)
     
     print("The word to guess has", len(word_To_Guess), "letters.")
     print("You can guess letters or the whole word.")
